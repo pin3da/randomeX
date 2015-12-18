@@ -9,23 +9,23 @@
   \end{equation}
 
   \begin{equation}
-    \frac{\partial Q_{ff}}{\partial \theta} =
-      K_{fu}  \frac{\partial {\inv{K_{uu}}  K_{uf}}}{\partial \theta} +
-      {\frac{\partial K_{fu}}{\partial \theta}}  {\inv{K_{uu}}  K_{uf}}
+    \frac{\partial Q_{ff}}{\partial \theta_{i}} =
+    K_{fu}  \frac{\partial {\inv{K_{uu}}  K_{uf}}}{\partial \theta_{i}} +
+    {\frac{\partial K_{fu}}{\partial \theta_{i}}}  {\inv{K_{uu}}  K_{uf}}
   \end{equation}
   \begin{equation}
-    \frac{\partial Q_{ff}}{\partial \theta} =
-      K_{fu}  \Big[ \inv{K_{uu}}  \frac{\partial K_{uf}}{\partial \theta}  -
-        (\inv{K_{uu}}  \frac{\partial K_{uu}}{\partial \theta}  \inv{K_{uu}})  K_{uf}
+    \frac{\partial Q_{ff}}{\partial \theta_{i}} =
+    K_{fu}  \Big[ \inv{K_{uu}}  \frac{\partial K_{uf}}{\partial \theta_{i}}  -
+      (\inv{K_{uu}}  \frac{\partial K_{uu}}{\partial \theta_{i}}  \inv{K_{uu}})  K_{uf}
         \Big] +
-        \frac{\partial K_{fu}}{\partial \theta}  \inv{K_{uu}}  K_{uf}
+        \frac{\partial K_{fu}}{\partial \theta_{i}}  \inv{K_{uu}}  K_{uf}
   \end{equation}
   \begin{equation}
-    \frac{\partial Q_{ff}}{\partial \theta} =
-      K_{fu}  \inv{K_{uu}}  \big[ \frac{\partial K_{uf}}{\partial \theta}  -
-        (\frac{\partial K_{uu}}{\partial \theta}  \inv{K_{uu}})  K_{uf}
+    \frac{\partial Q_{ff}}{\partial \theta_{i}} =
+    K_{fu}  \inv{K_{uu}}  \big[ \frac{\partial K_{uf}}{\partial \theta_{i}}  -
+      (\frac{\partial K_{uu}}{\partial \theta_{i}}  \inv{K_{uu}})  K_{uf}
         \big] +
-        \frac{\partial K_{fu}}{\partial \theta}  \inv{K_{uu}}  K_{uf}
+        \frac{\partial K_{fu}}{\partial \theta_{i}}  \inv{K_{uu}}  K_{uf}
   \end{equation}
 
   \begin{equation}
@@ -33,10 +33,10 @@
   \end{equation}
 
   \begin{equation}
-    \frac{\partial R}{\partial \theta} = \frac{\partial Q_{ff}}{\partial \theta}
-    + diag[\frac{\partial K_{ff}}{\partial \theta}]
-    - diag[\frac{\partial Q_{ff}}{\partial \theta}]
-    + \frac{\partial \sigma^{2}_{noise}}{\partial \theta}
+    \frac{\partial R}{\partial \theta_{i}} = \frac{\partial Q_{ff}}{\partial \theta_{i}}
+    + diag[\frac{\partial K_{ff}}{\partial \theta_{i}}]
+    - diag[\frac{\partial Q_{ff}}{\partial \theta_{i}}]
+    + \frac{\partial \sigma^{2}_{noise} I }{\partial \theta_{i}}
   \end{equation}
 
   \begin{equation}
@@ -46,8 +46,8 @@
 
 
   \begin{equation}
-    \frac{\partial log(y | X)}{\partial \theta} =
-    - \frac{1}{2} tr \Big(\inv{R} \frac{{\partial R}}{\partial \theta} \Big)
-    -\frac{1}{2} \textbf{y}^{\top} \inv{R} \frac{\partial R}{\partial \theta} \inv{R} \textbf{y}
+    \frac{\partial log(y | X)}{\partial \theta_{i}} =
+    - \frac{1}{2} tr \Big(\inv{R} \frac{{\partial R}}{\partial \theta_{i}} \Big)
+    -\frac{1}{2} \textbf{y}^{\top} \inv{R} \frac{\partial R}{\partial \theta_{i}} \inv{R} \textbf{y}
   \end{equation}
 \end{document}
